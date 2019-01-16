@@ -250,6 +250,7 @@
     <ClInclude Include="Sound.h" />
     <ClInclude Include="Sprite.h" />
     <ClInclude Include="State.h" />
+    <ClInclude Include="Utilities\BitVector.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Enemy.cpp" />
@@ -287,6 +288,7 @@
     <ClCompile Include="Sound.cpp" />
     <ClCompile Include="Sprite.cpp" />
     <ClCompile Include="State.cpp" />
+    <ClCompile Include="Utilities\BitVector.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
