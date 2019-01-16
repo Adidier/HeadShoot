@@ -1,0 +1,15 @@
+600
+400
+POOII Window
+0
+P1UP=w
+P1DOWN=s
+P1LEFT=a
+P1RIGHT=d
+P1SHOOT=spacebar
+P2UP=i
+P2DOWN=k
+P2LEFT=j
+P2RIGHT=l
+P2SHOOT=o
+Init Level = Map1.txt
