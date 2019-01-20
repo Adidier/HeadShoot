@@ -74,10 +74,11 @@ void PlatformSDL::init()
 	glCullFace(GL_BACK);
 }
 
-int PlatformSDL::inputOne()
+int PlatformSDL::inputOne() //refactorizar
 {
 	SDL_Event e;
 	SDL_PollEvent(&e);
+	SDL_PumpEvents();
 	const char* currentKeyStates = (char*)SDL_GetKeyboardState(NULL);
 	Key *key = getKeyToRead("P1UP");
 	if (key&&currentKeyStates[key->asciiValue - 93])
@@ -98,6 +99,12 @@ int PlatformSDL::inputOne()
 		key->state = 0;
 
 	key = getKeyToRead("P1RIGHT");
+	if (key&&currentKeyStates[key->asciiValue - 93])
+		key->state = 1;
+	else
+		key->state = 0;
+
+	key = getKeyToRead("P1SELECT");
 	if (key&&currentKeyStates[key->asciiValue - 93])
 		key->state = 1;
 	else

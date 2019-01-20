@@ -31,7 +31,7 @@
     <ProjectGuid>{F2C01E4B-0B7A-4E4B-A9AC-DF076147FD50}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>ProjectShooter</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -228,7 +228,6 @@
     <ClInclude Include="GameStateManager.h" />
     <ClInclude Include="ImageScreen.h" />
     <ClInclude Include="Key.h" />
-    <ClInclude Include="LinkedList.h" />
     <ClInclude Include="Log.h" />
     <ClInclude Include="Map.h" />
     <ClInclude Include="MenuState.h" />
@@ -252,6 +251,7 @@
     <ClInclude Include="Sprite.h" />
     <ClInclude Include="State.h" />
     <ClInclude Include="Utilities\BitVector.h" />
+    <ClInclude Include="Utilities\LinkedList.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Enemy.cpp" />
@@ -260,7 +260,6 @@
     <ClCompile Include="GameStateManager.cpp" />
     <ClCompile Include="ImageScreen.cpp" />
     <ClCompile Include="Key.cpp" />
-    <ClCompile Include="LinkedList.cpp" />
     <ClCompile Include="Log.cpp" />
     <ClCompile Include="Map.cpp" />
     <ClCompile Include="MenuState.cpp" />
@@ -291,6 +290,7 @@
     <ClCompile Include="Sprite.cpp" />
     <ClCompile Include="State.cpp" />
     <ClCompile Include="Utilities\BitVector.cpp" />
+    <ClCompile Include="Utilities\LinkedList.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

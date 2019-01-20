@@ -8,7 +8,8 @@ void GamePlayState::Init(Platform *plat)
 	map.loadMap("Map1.txt");
 
 	shader = new Shader("./Resources/Shaders/basicShader");
-	gun = new ImageScreen("./Resources/Sprites/gun.png");
+	gun1 = new ImageScreen("./Resources/Sprites/gun1.png");
+	gun2 = new ImageScreen("./Resources/Sprites/gun2.png");
     //enemy1 = new Enemy();
 	
 }
@@ -21,7 +22,10 @@ void GamePlayState::Update()
 
 void GamePlayState::Draw()
 {
-	gun->Draw();
+	if(currentGun==0)
+		gun1->Draw();
+	else if (currentGun == 1)
+		gun2->Draw();
 	//enemy1->Draw(camera);
 	map.drawEnemies(camera);
 }
@@ -46,6 +50,13 @@ void GamePlayState::Input()
 		camera.MoveRight(-0.1);
 	}
 
+	if (platform->getKeyToRead("P1SELECT")->state)
+	{
+		currentGun++;
+		platform->getKeyToRead("P1SELECT")->state = 0;
+		if (currentGun > 1)
+			currentGun = 0;
+	}
 
 	if (platform->getKeyToRead("P2RIGHT")->state)
 	{

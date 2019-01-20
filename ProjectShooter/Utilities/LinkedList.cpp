@@ -1,4 +1,4 @@
-#include "pch.h"
+
 #include "LinkedList.h"
 
 										//IMPORTANTE: Incluir este cpp en el source del cliente para evitar problemas de LINKER
