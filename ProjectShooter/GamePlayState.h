@@ -10,19 +10,21 @@
 #include "Platform.h"
 #include "ImageScreen.h"
 #include "Enemy.h"
+#include "Utilities\LinkedList.h"
+#include "Utilities\LinkedList.cpp"
+#include "Weapons.h"
 
 class GamePlayState : public State
 {
 private:
 	Map map;
 	Platform *platform;
-	ImageScreen *gun1;
-	ImageScreen *gun2;
 	Transform transform;
     Shader *shader;
 	Camera camera;
 	Enemy *enemy1;
 	Enemy *enemy2;
+	LinkedList<Weapon> weapons;
 	int currentGun{ 0 };
 	float rotateY{ 0 };
 public:

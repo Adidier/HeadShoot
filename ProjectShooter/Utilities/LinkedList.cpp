@@ -1,7 +1,7 @@
 
 #include "LinkedList.h"
 
-										//IMPORTANTE: Incluir este cpp en el source del cliente para evitar problemas de LINKER
+//IMPORTANTE: Incluir este cpp en el source del cliente para evitar problemas de LINKER
 
 template<class Datatype>
 //Constructor, indica que la lista no tiene nodos y tampoco apunta a ningun nodo
@@ -39,7 +39,7 @@ void LinkedList<Datatype>::Append(Datatype p_data)
 	if (m_head == 0)
 	{
 		// crea un nuevo nodo al cual le apuntan la cabeza y la cola
-		m_head = m_tail = new SListNode<Datatype>;
+		m_head = m_tail = new SListNode<Datatype>; //Error: attempting to reference a deleted function.
 		m_head->m_data = p_data;
 	}
 	//Si hay nodos 
@@ -63,4 +63,38 @@ void SListNode<Datatype>::InsertAfter(Datatype p_data)
 	newnode->m_next = m_next;
 	// nodo previo apunta al nuevo nodo
 	m_next = newnode;
+}
+
+template<class Datatype>
+LinkedListIter<Datatype>::LinkedListIter(SListNode<Datatype>* m_node, LinkedList<Datatype> * m_list)
+{
+	this->m_node = m_node;
+	this->m_list = m_list;
+}
+
+template<class Datatype>
+bool LinkedListIter<Datatype>::Valid()
+{
+	return (m_node != nullptr)
+}
+
+template<class Datatype>
+Datatype LinkedListIter<Datatype>::Item()
+{
+	return m_node->m_data;
+}
+
+template<class Datatype>
+void LinkedListIter<Datatype>::Forth()
+{
+	if (m_node != nullptr && m_node->m_next != nullptr) {
+		m_node = m_node->m_next;
+	}
+}
+
+
+template<class Datatype>
+LinkedListIter<Datatype> LinkedList<Datatype>::GetIterator()
+{
+	return LinkedListIter(m_head, this);
 }

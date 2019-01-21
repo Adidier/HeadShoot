@@ -8,8 +8,14 @@ void GamePlayState::Init(Platform *plat)
 	map.loadMap("Map1.txt");
 
 	shader = new Shader("./Resources/Shaders/basicShader");
-	gun1 = new ImageScreen("./Resources/Sprites/gun1.png");
-	gun2 = new ImageScreen("./Resources/Sprites/gun2.png");
+	//gun1 = new ImageScreen("./Resources/Sprites/gun1.png");
+	//gun2 = new ImageScreen("./Resources/Sprites/gun2.png");
+	Weapon weapon1("./Resources/Sprites/gun1.png");
+	Weapon weapon2("./Resources/Sprites/gun2.png");
+
+	weapons.Append(weapon1);
+	weapons.Append(weapon2);
+
     //enemy1 = new Enemy();
 	
 }
@@ -22,10 +28,12 @@ void GamePlayState::Update()
 
 void GamePlayState::Draw()
 {
+	/*
 	if(currentGun==0)
 		gun1->Draw();
 	else if (currentGun == 1)
 		gun2->Draw();
+		*/
 	//enemy1->Draw(camera);
 	map.drawEnemies(camera);
 }
