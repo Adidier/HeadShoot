@@ -1,5 +1,6 @@
 #include "pch.h"
 #include "GamePlayState.h"
+// Siempre debe de estar en debug y x64 para compilar
 
 void GamePlayState::Init(Platform *plat)
 {
