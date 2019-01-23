@@ -16,12 +16,14 @@ class GamePlayState : public State
 private:
 	Map map;
 	Platform *platform;
-	ImageScreen *gun;
+	ImageScreen *gun1;
+	ImageScreen *gun2;
 	Transform transform;
     Shader *shader;
 	Camera camera;
 	Enemy *enemy1;
 	Enemy *enemy2;
+	int currentGun{ 0 };
 	float rotateY{ 0 };
 public:
 	void Init(Platform *plat) override;

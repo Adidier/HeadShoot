@@ -108,7 +108,10 @@
     <ClInclude Include="Utilities\BitVector.h">
       <Filter>Utilities</Filter>
     </ClInclude>
-    <ClInclude Include="LinkedList.h">
+    <ClInclude Include="Utilities\LinkedList.h">
+      <Filter>Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="Utilities\DoubleLinkedList.h">
       <Filter>Utilities</Filter>
     </ClInclude>
   </ItemGroup>
@@ -188,7 +191,10 @@
     <ClCompile Include="Utilities\BitVector.cpp">
       <Filter>Utilities</Filter>
     </ClCompile>
-    <ClCompile Include="LinkedList.cpp">
+    <ClCompile Include="Utilities\LinkedList.cpp">
+      <Filter>Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="Utilities\DoubleLinkedList.cpp">
       <Filter>Utilities</Filter>
     </ClCompile>
   </ItemGroup>
