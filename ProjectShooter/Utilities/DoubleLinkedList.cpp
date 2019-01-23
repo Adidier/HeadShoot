@@ -38,6 +38,20 @@ void DoubleLinkedList<Datatype>::Append(Datatype p_data)
 }
 
 template<class Datatype>
+void DoubleLinkedList<Datatype>::RemoveTail()
+{
+	if (m_tail != nullptr && m_count >= 3)
+	{
+		DoubleNode<Datatype>* tail_to_remove = m_tail;
+		m_tail = m_tail->m_previous;
+		m_tail->m_next = m_head;
+		delete tail_to_remove;
+		--m_count;
+	}
+	return;
+}
+
+template<class Datatype>
 void DoubleLinkedList<Datatype>::InsertAfter(Datatype p_data)
 {
 	DoubleNode<Datatype>* newnode = new DoubleNode<Datatype>;
