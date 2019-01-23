@@ -251,6 +251,7 @@
     <ClInclude Include="Sprite.h" />
     <ClInclude Include="State.h" />
     <ClInclude Include="Utilities\BitVector.h" />
+    <ClInclude Include="Utilities\DoubleLinkedList.h" />
     <ClInclude Include="Utilities\LinkedList.h" />
   </ItemGroup>
   <ItemGroup>
@@ -290,6 +291,7 @@
     <ClCompile Include="Sprite.cpp" />
     <ClCompile Include="State.cpp" />
     <ClCompile Include="Utilities\BitVector.cpp" />
+    <ClCompile Include="Utilities\DoubleLinkedList.cpp" />
     <ClCompile Include="Utilities\LinkedList.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
