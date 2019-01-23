@@ -40,10 +40,10 @@ void DoubleLinkedList<Datatype>::Append(Datatype p_data)
 template<class Datatype>
 void DoubleLinkedList<Datatype>::InsertAfter(Datatype p_data)
 {
-	DoubleNode<Datatype>* newnode = new DoubleNode<Datatype>;
+	/*DoubleNode<Datatype>* newnode = new DoubleNode<Datatype>;
 	newnode->m_data = p_data;
 	newnode->m_next = m_next;
 	newnode->m_previous = m_previous;
 	m_previous = newnode;
-	m_next = newnode;
+	m_next = newnode;*/
 }
