@@ -1,0 +1,42 @@
+﻿  pch.cpp
+  Enemy.cpp
+c:\users\alejandro\desktop\comgrafolder\headshoot\projectshooter\enemy.cpp(57): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "pch.h"' to your source?
+  GameObject.cpp
+  GamePlayState.cpp
+c:\users\alejandro\desktop\comgrafolder\headshoot\projectshooter\enemy.h(2): fatal error C1083: Cannot open include file: 'mesh.h': No such file or directory
+  GameStateManager.cpp
+c:\users\alejandro\desktop\comgrafolder\headshoot\projectshooter\platformsdl.h(3): fatal error C1083: Cannot open include file: 'SDL.h': No such file or directory
+  ImageScreen.cpp
+c:\users\alejandro\desktop\comgrafolder\headshoot\projectshooter\imagescreen.cpp(91): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "pch.h"' to your source?
+  Key.cpp
+  Log.cpp
+  Map.cpp
+c:\users\alejandro\desktop\comgrafolder\headshoot\projectshooter\enemy.h(2): fatal error C1083: Cannot open include file: 'mesh.h': No such file or directory
+  MenuState.cpp
+  Model.cpp
+  Platform.cpp
+  PlatformSDL.cpp
+c:\users\alejandro\desktop\comgrafolder\headshoot\projectshooter\platformsdl.h(3): fatal error C1083: Cannot open include file: 'SDL.h': No such file or directory
+  PlatformWIN32.cpp
+c:\users\alejandro\desktop\comgrafolder\headshoot\projectshooter\platformwin32.h(4): fatal error C1083: Cannot open include file: 'mesh.h': No such file or directory
+  ProjectShooter.cpp
+c:\users\alejandro\desktop\comgrafolder\headshoot\projectshooter\enemy.h(2): fatal error C1083: Cannot open include file: 'mesh.h': No such file or directory
+  mesh.cpp
+c:\users\alejandro\desktop\comgrafolder\headshoot\projectshooter\render\mesh.cpp(78): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "pch.h"' to your source?
+  obj_loader.cpp
+c:\users\alejandro\desktop\comgrafolder\headshoot\projectshooter\render\obj_loader.cpp(406): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "pch.h"' to your source?
+  shader.cpp
+c:\users\alejandro\desktop\comgrafolder\headshoot\projectshooter\render\shader.cpp(119): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "pch.h"' to your source?
+  texture.cpp
+c:\users\alejandro\desktop\comgrafolder\headshoot\projectshooter\render\texture.cpp(36): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "pch.h"' to your source?
+  ResourceManager.cpp
+  Sound.cpp
+  Generating Code...
+  Compiling...
+  Sprite.cpp
+  State.cpp
+  BitVector.cpp
+c:\users\alejandro\desktop\comgrafolder\headshoot\projectshooter\utilities\bitvector.cpp(82): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "pch.h"' to your source?
+  LinkedList.cpp
+c:\users\alejandro\desktop\comgrafolder\headshoot\projectshooter\utilities\linkedlist.cpp(67): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "pch.h"' to your source?
+  Generating Code...

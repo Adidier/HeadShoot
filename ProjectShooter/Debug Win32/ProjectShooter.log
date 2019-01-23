@@ -1,0 +1,39 @@
+﻿  pch.cpp
+  Enemy.cpp
+  GameObject.cpp
+  GamePlayState.cpp
+c:\users\alejandro\desktop\comgrafolder\headshoot\projectshooter\gameplaystate.cpp(38): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\alejandro\desktop\comgrafolder\headshoot\projectshooter\gameplaystate.cpp(42): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\alejandro\desktop\comgrafolder\headshoot\projectshooter\gameplaystate.cpp(46): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\alejandro\desktop\comgrafolder\headshoot\projectshooter\gameplaystate.cpp(50): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\alejandro\desktop\comgrafolder\headshoot\projectshooter\gameplaystate.cpp(63): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\alejandro\desktop\comgrafolder\headshoot\projectshooter\gameplaystate.cpp(67): warning C4305: 'argument': truncation from 'double' to 'float'
+  GameStateManager.cpp
+  ImageScreen.cpp
+c:\users\alejandro\desktop\comgrafolder\headshoot\projectshooter\imagescreen.cpp(51): warning C4305: '=': truncation from 'double' to 'float'
+  Key.cpp
+  Log.cpp
+  Map.cpp
+c:\users\alejandro\desktop\comgrafolder\headshoot\projectshooter\map.cpp(25): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  MenuState.cpp
+  Model.cpp
+  Platform.cpp
+  PlatformSDL.cpp
+  PlatformWIN32.cpp
+  ProjectShooter.cpp
+  mesh.cpp
+  obj_loader.cpp
+c:\users\alejandro\desktop\comgrafolder\headshoot\projectshooter\render\obj_loader.cpp(378): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+  shader.cpp
+  texture.cpp
+  ResourceManager.cpp
+  Sound.cpp
+  Generating Code...
+  Compiling...
+  Sprite.cpp
+  State.cpp
+  BitVector.cpp
+  LinkedList.cpp
+  Generating Code...
+  stb_image.c
+  ProjectShooter.vcxproj -> C:\Users\Alejandro\Desktop\ComGrafolder\HeadShoot\Debug Win32\ProjectShooter.exe
