@@ -1,0 +1,60 @@
+ProjectShooter/Debug/GameStateManager.obj
+ProjectShooter/x64/Debug Win32/vc141.pdb
+ProjectShooter/x64/Debug Win32/vc141.idb
+ProjectShooter/x64/Debug Win32/pch.obj
+ProjectShooter/x64/Debug Win32/ProjectShooter.tlog/unsuccessfulbuild
+ProjectShooter/x64/Debug Win32/ProjectShooter.tlog/ProjectShooter.lastbuildstate
+ProjectShooter/x64/Debug Win32/ProjectShooter.tlog/CL.write.1.tlog
+ProjectShooter/x64/Debug Win32/ProjectShooter.tlog/CL.read.1.tlog
+ProjectShooter/x64/Debug Win32/ProjectShooter.tlog/CL.command.1.tlog
+ProjectShooter/Debug/obj_loader.obj
+ProjectShooter/Debug/mesh.obj
+ProjectShooter/Debug/State.obj
+ProjectShooter/Debug/Sprite.obj
+ProjectShooter/Debug/Sound.obj
+ProjectShooter/Debug/ResourceManager.obj
+ProjectShooter/Debug/ProjectShooter.tlog/link.write.1.tlog
+ProjectShooter/Debug/ProjectShooter.tlog/link.read.1.tlog
+ProjectShooter/Debug/PlatformWIN32.obj
+ProjectShooter/Debug/PlatformSDL.obj
+ProjectShooter/Debug/Platform.obj
+ProjectShooter/Debug/Model.obj
+ProjectShooter/Debug/MenuState.obj
+ProjectShooter/Debug/Map.obj
+ProjectShooter/Debug/Log.obj
+ProjectShooter/Debug/LinkedList.obj
+ProjectShooter/Debug/Key.obj
+Debug/ProjectShooter.ilk
+Debug/ProjectShooter.exe
+.vs/ProjectShooter/v15/ipch/c92e5d493d851e45.ipch
+.vs/ProjectShooter/v15/ipch/AutoPCH/ce9d02744c9b842b/DOUBLELINKEDLIST.ipch
+.vs/ProjectShooter/v15/ipch/AutoPCH/3c731311fdc9990a/DOUBLELINKEDLIST.ipch
+.vs/ProjectShooter/v15/Browse.VC.opendb
+.vs/ProjectShooter/v15/Browse.VC.db
+.vs/ProjectShooter/v15/.suo
+ProjectShooter/x64/Debug Win32/ProjectShooter.pch
+ProjectShooter/x64/Debug Win32/ProjectShooter.log
+ProjectShooter/Debug/vc141.pdb
+ProjectShooter/Debug/vc141.idb
+ProjectShooter/Debug/texture.obj
+ProjectShooter/Debug/stb_image.obj
+ProjectShooter/Debug/shader.obj
+ProjectShooter/Debug/pch.obj
+ProjectShooter/Debug/ProjectShooter.tlog/link.command.1.tlog
+ProjectShooter/Debug/ProjectShooter.tlog/ProjectShooter.lastbuildstate
+ProjectShooter/Debug/ProjectShooter.tlog/CL.write.1.tlog
+ProjectShooter/Debug/ProjectShooter.tlog/CL.read.1.tlog
+ProjectShooter/Debug/ProjectShooter.tlog/CL.command.1.tlog
+ProjectShooter/Debug/ProjectShooter.pch
+ProjectShooter/Debug/ProjectShooter.obj
+ProjectShooter/Debug/ProjectShooter.log
+ProjectShooter/Debug/ImageScreen.obj
+ProjectShooter/Debug/GamePlayState.obj
+ProjectShooter/Debug/GameObject.obj
+ProjectShooter/Debug/Enemy.obj
+ProjectShooter/Debug/DoubleLinkedList.obj
+ProjectShooter/Debug/BitVector.obj
+Debug/ProjectShooter.pdb
+.vs/ProjectShooter/v15/ipch/AutoPCH/6d7ab79e4f501019/DOUBLELINKEDLIST.ipch
+.vs/ProjectShooter/v15/ipch/AutoPCH/79012d1a2cce51a3/STACK.ipch
+ProjectShooter/Debug/Stack.obj

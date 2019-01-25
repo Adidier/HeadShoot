@@ -249,8 +249,10 @@
     <ClInclude Include="ResourceManager.h" />
     <ClInclude Include="Sound.h" />
     <ClInclude Include="Sprite.h" />
+    <ClInclude Include="Stack.h" />
     <ClInclude Include="State.h" />
     <ClInclude Include="Utilities\BitVector.h" />
+    <ClInclude Include="Utilities\DoubleLinkedList.h" />
     <ClInclude Include="Utilities\LinkedList.h" />
   </ItemGroup>
   <ItemGroup>
@@ -288,8 +290,10 @@
     <ClCompile Include="ResourceManager.cpp" />
     <ClCompile Include="Sound.cpp" />
     <ClCompile Include="Sprite.cpp" />
+    <ClCompile Include="Stack.cpp" />
     <ClCompile Include="State.cpp" />
     <ClCompile Include="Utilities\BitVector.cpp" />
+    <ClCompile Include="Utilities\DoubleLinkedList.cpp" />
     <ClCompile Include="Utilities\LinkedList.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
