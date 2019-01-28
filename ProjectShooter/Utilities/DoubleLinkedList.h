@@ -22,6 +22,7 @@ public:
 
 	void Append(Datatype p_data);
 	void InsertAfter(Datatype p_data);
+	void RemoveTail();
 
 	DoubleLinkedList();
 	~DoubleLinkedList();
