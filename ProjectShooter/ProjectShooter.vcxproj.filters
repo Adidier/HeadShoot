@@ -114,6 +114,9 @@
     <ClInclude Include="Utilities\DoubleLinkedList.h">
       <Filter>Utilities</Filter>
     </ClInclude>
+    <ClInclude Include="Stack.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -196,6 +199,9 @@
     </ClCompile>
     <ClCompile Include="Utilities\DoubleLinkedList.cpp">
       <Filter>Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="Stack.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

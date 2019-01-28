@@ -55,4 +55,10 @@ ProjectShooter/Debug/Enemy.obj
 ProjectShooter/Debug/DoubleLinkedList.obj
 ProjectShooter/Debug/BitVector.obj
 Debug/ProjectShooter.pdb
+<<<<<<< HEAD
 .vs/ProjectShooter/v15/ipch/AutoPCH/9ceff559f9bd4e39/DOUBLELINKEDLIST.ipch
+=======
+.vs/ProjectShooter/v15/ipch/AutoPCH/6d7ab79e4f501019/DOUBLELINKEDLIST.ipch
+.vs/ProjectShooter/v15/ipch/AutoPCH/79012d1a2cce51a3/STACK.ipch
+ProjectShooter/Debug/Stack.obj
+>>>>>>> master

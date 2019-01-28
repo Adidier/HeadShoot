@@ -26,9 +26,34 @@ public:
 	int m_count;
 	
 	void Append(Datatype p_data);
+	void Prepend(Datatype p_data);
+	void RemoveHead();
+	void RemoveTail();
 
 	LinkedList();
 	~LinkedList();
+};
+
+template<class Datatype>
+class SListIterator
+{
+public:
+	SListNode<Datatype>* m_node;
+	LinkedList<Datatype>* m_list;
+
+	SListIterator(LinkedList<Datatype> *p_list = 0, SListNode<Datatype> *p_node = 0);
+
+	void Start();
+	void Forth();
+	Datatype& Item();
+	bool Valid();
+	SListIterator<Datatype> GetIterator();
+
+
+	//Inserta un nuevo item después del iterador o del append actual si la info del 
+	// iterador es inválido
+	void Insert(SListIterator<Datatype>& p_iterator, Datatype p_data);
+	void Remove(SListIterator<Datatype>& p_iterator);
 };
 
 

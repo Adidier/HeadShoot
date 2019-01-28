@@ -40,11 +40,11 @@ void DoubleLinkedList<Datatype>::Append(Datatype p_data)
 template<class Datatype>
 void DoubleLinkedList<Datatype>::RemoveTail()
 {
-	if (m_tail != nullptr && m_count >= 3)
+	if (m_tail != nullptr && m_count >= 2)
 	{
 		DoubleNode<Datatype>* tail_to_remove = m_tail;
 		m_tail = m_tail->m_previous;
-		m_tail->m_next = m_head;
+		m_tail->m_next = nullptr;
 		delete tail_to_remove;
 		--m_count;
 	}
