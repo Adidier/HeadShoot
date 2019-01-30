@@ -14,10 +14,10 @@ bool Map::loadMap(std::string levelName)
 			getline(myfile, currLine); //line 1
 			//for (int c = 0; c < currLine.length(); ++c) {
 			Enemy enemy;
+			
 			std::vector<std::string> vect;
 			std::stringstream ss(currLine);
-			while (ss.good())
-			{
+			while (ss.good()){
 				std::string substr;
 				getline(ss, substr, ',');
 				vect.push_back(substr);
@@ -25,6 +25,9 @@ bool Map::loadMap(std::string levelName)
 			enemy.SetPosition(stoi(vect[2]), stoi(vect[3]), stoi(vect[4]));
 			vectorenemies.push_back(enemy);
 		}
+		EnemyListMovement enemyfromlist;
+		enemyfromlist.SetPosition(1, 1, 1);
+		listvectorenemies.push_back(enemyfromlist);
 	}
 	return false;
 }
@@ -36,6 +39,8 @@ Map::Map()
 void Map::drawEnemies(Camera camera)
 {
 	for (Enemy e : vectorenemies)
+		e.Draw(camera);
+	for (EnemyListMovement e : listvectorenemies)
 		e.Draw(camera);
 }
 

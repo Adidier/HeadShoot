@@ -5,6 +5,7 @@
 #include "GameObject.h"
 #include <vector>
 #include "Enemy.h"
+#include "EnemyListMovement.h"
 #include "camera.h"
 
 class Map
@@ -12,6 +13,7 @@ class Map
 private:
 	std::vector<std::string> vectorstring;
 	std::vector<Enemy> vectorenemies;
+	std::vector<EnemyListMovement> listvectorenemies;
 public:
 	bool loadMap(std::string levelName);
 	void drawEnemies(Camera camera);
