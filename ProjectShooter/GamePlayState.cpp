@@ -1,9 +1,11 @@
 #include "pch.h"
 #include "GamePlayState.h"
 // Siempre debe de estar en debug y x64 para compilar
+#include "Utilities\HashTable.h"
 
 void GamePlayState::Init(Platform *plat)
 {
+
 	platform = plat;
 	Log::Write("Current state: Init.");
 	map.loadMap("Map1.txt");
@@ -11,7 +13,15 @@ void GamePlayState::Init(Platform *plat)
 	shader = new Shader("./Resources/Shaders/basicShader");
 	gun1 = new ImageScreen("./Resources/Sprites/gun1.png");
 	gun2 = new ImageScreen("./Resources/Sprites/gun2.png");
-    //enemy1 = new Enemy();
+
+	guns.Append(1);
+	guns.Append(2);
+
+	guns.Append(3);
+
+	guns.Append(4);
+	guns.RemoveTail();
+    enemy1 = new Enemy();
 	
 }
 void GamePlayState::Update()

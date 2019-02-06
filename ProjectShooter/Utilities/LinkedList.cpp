@@ -1,10 +1,11 @@
+#ifdef LINKEDLIST_H
 
-#include "LinkedList.h"
 
+#include "transform.h"
+template class LinkedList<Transform>;
 										//IMPORTANTE: Incluir este cpp en el source del cliente para evitar problemas de LINKER
 
 template<class Datatype>
-//Constructor, indica que la lista no tiene nodos y tampoco apunta a ningun nodo
 LinkedList<Datatype>::LinkedList()
 {
 	m_head = 0;
@@ -233,3 +234,4 @@ void SListIterator<Datatype>::Remove(SListIterator<Datatype>& p_iterator)
 	}
 	m_count--;
 }
+#endif // !1
