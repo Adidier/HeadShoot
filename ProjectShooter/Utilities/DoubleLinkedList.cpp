@@ -59,10 +59,7 @@ void DoubleLinkedList<Datatype>::InsertAfter(Datatype p_data)
 	newnode->m_next = nullptr;
 	newnode->m_previous = m_tail;
 	m_tail->m_next = newnode;
-<<<<<<< HEAD
-}
-=======
+
 }
 
 #endif
->>>>>>> master

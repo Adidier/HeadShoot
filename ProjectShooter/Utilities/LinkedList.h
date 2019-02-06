@@ -9,10 +9,7 @@ class SListNode
 public:
 	Datatype m_data; //contiene el dato que se almacenara en un nodo
 	SListNode<Datatype>* m_next; //apunta a otra objeto de esta clase 
-<<<<<<< HEAD
-=======
 	SListNode() {}
->>>>>>> master
 	void InsertAfter(Datatype p_data);
 };
 															// Lista Ligada especifica
@@ -60,11 +57,6 @@ public:
 };
 
 
-<<<<<<< HEAD
-#endif
-=======
 #include"LinkedList.cpp"
 
 #endif
-
->>>>>>> master

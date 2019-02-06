@@ -33,15 +33,15 @@ float EnemyListMovement::GetZPosition(){
 }
 
 float EnemyListMovement::GetNodeXPosition() {
-	return nodelist.m_head->m_data.GetPos()->x;
+	return 1.0f;
 }
 
 float EnemyListMovement::GetNodeYPosition() {
-	return nodelist.m_head->m_data.GetPos()->y;
+	return 1.0f;
 }
 
 float EnemyListMovement::GetNodeZPosition() {
-	return nodelist.m_head->m_data.GetPos()->z;
+	return 1.0f;
 }
 
 void EnemyListMovement::Draw(const Camera &camera){

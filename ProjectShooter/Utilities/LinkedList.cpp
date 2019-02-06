@@ -1,15 +1,6 @@
-<<<<<<< HEAD
-#include "LinkedList.h"
-#include "shader.h"
-								//IMPORTANTE: Incluir este cpp en el source del cliente para evitar problemas de LINKER
-=======
 #ifdef LINKEDLIST_H
-
-
 #include "transform.h"
 template class LinkedList<Transform>;
-										//IMPORTANTE: Incluir este cpp en el source del cliente para evitar problemas de LINKER
->>>>>>> master
 
 template<class Datatype>
 LinkedList<Datatype>::LinkedList()
@@ -240,9 +231,5 @@ void SListIterator<Datatype>::Remove(SListIterator<Datatype>& p_iterator)
 	}
 	m_count--;
 }
-<<<<<<< HEAD
-
 template class LinkedList<Transform>;
-=======
 #endif // !1
->>>>>>> master
