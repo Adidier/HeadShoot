@@ -12,6 +12,14 @@ void EnemyListMovement::SetPosition(float x, float y, float z){
 	transform.GetPos()->z = z;
 }
 
+void EnemyListMovement::AddEnemyNode(float x, float y, float z) {
+	Transform EnemyNode;
+	EnemyNode.GetPos()->x = x;
+	EnemyNode.GetPos()->y = y;
+	EnemyNode.GetPos()->z = z;
+	nodelist.Append(EnemyNode);
+}
+
 float EnemyListMovement::GetXPosition(){
 	return transform.GetPos()->x;
 }
@@ -22,6 +30,18 @@ float EnemyListMovement::GetYPosition(){
 
 float EnemyListMovement::GetZPosition(){
 	return transform.GetPos()->z;
+}
+
+float EnemyListMovement::GetNodeXPosition() {
+	return nodelist.m_head->m_data.GetPos()->x;
+}
+
+float EnemyListMovement::GetNodeYPosition() {
+	return nodelist.m_head->m_data.GetPos()->y;
+}
+
+float EnemyListMovement::GetNodeZPosition() {
+	return nodelist.m_head->m_data.GetPos()->z;
 }
 
 void EnemyListMovement::Draw(const Camera &camera){

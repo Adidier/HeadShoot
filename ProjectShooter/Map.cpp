@@ -27,6 +27,9 @@ bool Map::loadMap(std::string levelName)
 		}
 		EnemyListMovement enemyfromlist;
 		enemyfromlist.SetPosition(1, 1, 1);
+		/*enemyfromlist.AddEnemyNode(10, 10, 10);
+		enemyfromlist.AddEnemyNode(5, 5, 5);
+		enemyfromlist.AddEnemyNode(-10, -10, -10);*/
 		listvectorenemies.push_back(enemyfromlist);
 	}
 	return false;
@@ -60,6 +63,23 @@ void Map::updateEnemies(glm::vec3 & p1pos)
 	vectorenemies.clear();
 	for (Enemy e : tempvector)
 		vectorenemies.push_back(e);
+	/*std::vector<EnemyListMovement> secondtempvector;
+	for (EnemyListMovement e : listvectorenemies)
+	{
+		float x = e.GetXPosition();
+		float y = e.GetYPosition();
+		float z = e.GetZPosition();
+		float x1 = e.GetNodeXPosition();
+		float y1 = e.GetNodeYPosition();
+		float z1 = e.GetNodeZPosition();
+		float squared;
+		squared = sqrt(((x - x1) *(x - x1)) + ((y - y1) *(y - y1)) + ((z - z1)*(z - z1)));
+		e.SetPosition(x - .01f *((x - x1) / squared), y - .01f *((y - y1) / squared), z - .01f *((z - z1) / squared));
+		secondtempvector.push_back(e);
+	}
+	listvectorenemies.clear();
+	for (Enemy e : tempvector)
+		vectorenemies.push_back(e);*/
 }
 
 Map::~Map()

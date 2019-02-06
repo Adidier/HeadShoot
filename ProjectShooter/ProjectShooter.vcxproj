@@ -227,6 +227,7 @@
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="GamePlayState.h" />
     <ClInclude Include="GameStateManager.h" />
+    <ClInclude Include="HashTable.h" />
     <ClInclude Include="ImageScreen.h" />
     <ClInclude Include="Key.h" />
     <ClInclude Include="Log.h" />
@@ -262,6 +263,7 @@
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="GamePlayState.cpp" />
     <ClCompile Include="GameStateManager.cpp" />
+    <ClCompile Include="HashTable.cpp" />
     <ClCompile Include="ImageScreen.cpp" />
     <ClCompile Include="Key.cpp" />
     <ClCompile Include="Log.cpp" />

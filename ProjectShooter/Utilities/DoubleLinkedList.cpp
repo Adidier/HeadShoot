@@ -56,8 +56,7 @@ void DoubleLinkedList<Datatype>::InsertAfter(Datatype p_data)
 {
 	DoubleNode<Datatype>* newnode = new DoubleNode<Datatype>;
 	newnode->m_data = p_data;
-	newnode->m_next = m_next;
-	newnode->m_previous = m_previous;
-	m_previous = newnode;
-	m_next = newnode;
+	newnode->m_next = nullptr;
+	newnode->m_previous = m_tail;
+	m_tail->m_next = newnode;
 }
