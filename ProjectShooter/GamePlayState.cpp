@@ -1,5 +1,6 @@
 #include "pch.h"
 #include "GamePlayState.h"
+#include "Stack.h"
 // Siempre debe de estar en debug y x64 para compilar
 #include "Utilities\HashTable.h"
 
@@ -22,7 +23,14 @@ void GamePlayState::Init(Platform *plat)
 	guns.Append(4);
 	guns.RemoveTail();
     enemy1 = new Enemy();
-	
+
+	Stack <int> pila;
+	pila.push(1);
+	pila.push(2);
+	pila.push(3);
+	pila.pop();
+
+	int r = pila.top();
 }
 void GamePlayState::Update()
 {
