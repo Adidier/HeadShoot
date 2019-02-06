@@ -9,6 +9,10 @@ class SListNode
 public:
 	Datatype m_data; //contiene el dato que se almacenara en un nodo
 	SListNode<Datatype>* m_next; //apunta a otra objeto de esta clase 
+<<<<<<< HEAD
+=======
+	SListNode() {}
+>>>>>>> master
 	void InsertAfter(Datatype p_data);
 };
 															// Lista Ligada especifica
@@ -16,14 +20,14 @@ public:
 template<class Datatype>
 class LinkedList
 {
-public:
+
 	//Apuntador al primer nodo
 	SListNode<Datatype>* m_head;
 	//Apuntador al segundo nodo
 	SListNode<Datatype>* m_tail;
 	//Entero que indicara el numero total de nodos en la lista
 	int m_count;
-	
+public:
 	void Append(Datatype p_data);
 	void Prepend(Datatype p_data);
 	void RemoveHead();
@@ -56,4 +60,11 @@ public:
 };
 
 
+<<<<<<< HEAD
 #endif
+=======
+#include"LinkedList.cpp"
+
+#endif
+
+>>>>>>> master

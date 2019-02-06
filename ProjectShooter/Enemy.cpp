@@ -2,9 +2,10 @@
 
 
 
+
 Enemy::Enemy()
 {
-
+	path = new LinkedList<Transform>();
 	monkey = new Mesh("./Resources/Models/MagmaElemental.obj");
 	shader = new Shader("./Resources/Shaders/basicShader");
 	texture = new Texture("./Resources/Sprites/bricks.jpg");

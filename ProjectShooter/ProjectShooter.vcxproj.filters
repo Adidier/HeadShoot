@@ -117,11 +117,16 @@
     <ClInclude Include="Stack.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+<<<<<<< HEAD
     <ClInclude Include="EnemyListMovement.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="HashTable.h">
       <Filter>Header Files</Filter>
+=======
+    <ClInclude Include="Utilities\HashTable.h">
+      <Filter>Utilities</Filter>
+>>>>>>> master
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -209,11 +214,16 @@
     <ClCompile Include="Stack.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+<<<<<<< HEAD
     <ClCompile Include="EnemyListMovement.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="HashTable.cpp">
       <Filter>Source Files</Filter>
+=======
+    <ClCompile Include="Utilities\HashTable.cpp">
+      <Filter>Utilities</Filter>
+>>>>>>> master
     </ClCompile>
   </ItemGroup>
 </Project>

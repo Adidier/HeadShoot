@@ -10,6 +10,7 @@
 #include "Platform.h"
 #include "ImageScreen.h"
 #include "Enemy.h"
+#include "Utilities\DoubleLinkedList.h"
 
 class GamePlayState : public State
 {
@@ -18,6 +19,7 @@ private:
 	Platform *platform;
 	ImageScreen *gun1;
 	ImageScreen *gun2;
+	DoubleLinkedList<int> guns;
 	Transform transform;
     Shader *shader;
 	Camera camera;

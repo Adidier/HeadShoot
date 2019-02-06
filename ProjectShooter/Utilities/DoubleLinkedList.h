@@ -1,6 +1,7 @@
 #ifndef DOUBLELL_H 
 #define DOUBLELL_H
 
+
 template<class Datatype>
 class DoubleNode
 {
@@ -27,4 +28,6 @@ public:
 	DoubleLinkedList();
 	~DoubleLinkedList();
 };
+
+#include"DoubleLinkedList.cpp"
 #endif
