@@ -6,6 +6,7 @@ class Stack : public  DoubleLinkedList <dataType>
 {
 public:
 
+	void push(dataType p_data);
 
 	Stack();
 	~Stack();
