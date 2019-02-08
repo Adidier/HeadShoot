@@ -1,9 +1,16 @@
 #ifdef LINKEDLIST_H
 
-
-#include "transform.h"
-template class LinkedList<Transform>;
-										//IMPORTANTE: Incluir este cpp en el source del cliente para evitar problemas de LINKER
+template<class Datatype>
+void SListNode<Datatype>::InsertAfter(Datatype p_data)
+{
+	// crea nuevo nodo
+	SListNode<Datatype>* newnode = new SListNode<Datatype>;
+	newnode->m_data = p_data;
+	// nuevo nodo apunta al siguiente nodo
+	newnode->m_next = m_next;
+	// nodo previo apunta al nuevo nodo
+	m_next = newnode;
+}
 
 template<class Datatype>
 LinkedList<Datatype>::LinkedList()
@@ -71,7 +78,6 @@ void LinkedList<Datatype>::Prepend(Datatype p_data)
 template<class Datatype>
 void LinkedList<Datatype>::RemoveHead()
 {
-	LinkedList LlamaAlConstructor;
 	SListNode<Datatype>* node = 0;
 	if (m_head != 0)
 	{
@@ -118,19 +124,75 @@ void LinkedList<Datatype>::RemoveTail()
 	}
 }
 
-
+template<class Datatype>
+void LinkedList<Datatype>::Insert(SListIterator<Datatype>& p_iterator, Datatype p_data)
+{
+	// Si el iterador no pertenece a esta lista, entonces no hace nada
+	if (p_iterator.m_list != this)
+		return;
+	if (p_iterator.m_node != 0)
+	{
+		// Si el iterador es válido, entonces inserta un nodo
+		p_iterator.m_node->InsertAfter(p_data);
+		// Si el iterador es el nodo de la cola, entonces actualiza el 
+		// apuntador de la cola al nuevo nodo
+		if (p_iterator.m_node == m_tail)
+		{
+			m_tail = p_iterator.m_node->m_next;
+		}
+		m_count++;
+	}
+	else
+	{
+		// Si el iterador es inválido, entonces adjunta(append) la información
+		Append(p_data);
+	}
+}
 
 template<class Datatype>
-void SListNode<Datatype>::InsertAfter(Datatype p_data)
+void LinkedList<Datatype>::Remove(SListIterator<Datatype>& p_iterator)
 {
-	// crea nuevo nodo
-	SListNode<Datatype>* newnode = new SListNode<Datatype>;
-	newnode->m_data = p_data;
-	// nuevo nodo apunta al siguiente nodo
-	newnode->m_next = m_next;
-	// nodo previo apunta al nuevo nodo
-	m_next = newnode;
+	SListNode<Datatype>* node = m_head;
+	// Si el iterador no pertenece a esta lista, no hace nada
+	if (p_iterator.m_list != this)
+		return;
+	// Si el nodo es inválido, no hace nada
+	if (p_iterator.m_node == 0)
+		return;
+	if (p_iterator.m_node == m_head)
+	{
+		// Mueve el iterador hacia delante y borra la cabeza
+		p_iterator.Forth();
+		RemoveHead();
+	}
+	else
+	{
+		// Escanea hacia delante a través de la lista hasta que el nodo
+		// principal encuentra el nodo que deseas borrar
+		while (node->m_next != p_iterator.m_node)
+			node = node->m_next;
+		// Moueve el iterador hacia delante
+		p_iterator.Forth();
+		// Si el nodo que estás borrando es la cola, 
+		// entonces actualiza el nodo de la cola
+		if (node->m_next == m_tail)
+		{
+			m_tail = node;
+		}
+		// Borra el nodo
+		delete node->m_next;
+		// re-linkea la lista
+		node->m_next = p_iterator.m_node;
+	}
+	m_count--;
 }
+
+template<class Datatype>
+SListIterator<Datatype> LinkedList<Datatype>::GetIterator()
+{
+	return SListIterator<Datatype>(this, m_head);
+}
+
 
 
 template<class Datatype>
@@ -166,72 +228,4 @@ bool SListIterator<Datatype>::Valid()
 	return (m_node != 0);
 }
 
-template<class Datatype>
-SListIterator<Datatype> SListIterator<Datatype>::GetIterator()
-{
-	return SListIterator<Datatype>(this, m_head);
-}
-
-template<class Datatype>
-void SListIterator<Datatype>::Insert(SListIterator<Datatype>& p_iterator, Datatype p_data)
-{
-	// Si el iterador no pertenece a esta lista, entonces no hace nada
-	if (p_iterator.m_list != this)
-		return;
-	if (p_iterator.m_node != 0)
-	{
-		// Si el iterador es válido, entonces inserta un nodo
-		p_iterator.m_node->InsertAfter(p_data);
-		// Si el iterador es el nodo de la cola, entonces actualiza el 
-		// apuntador de la cola al nuevo nodo
-		if (p_iterator.m_node == m_tail)
-		{
-			m_tail = p_iterator.m_node->m_next;
-		}
-		m_count++;
-	}
-	else
-	{
-		// Si el iterador es inválido, entonces adjunta(append) la información
-		Append(p_data);
-	}
-}
-
-template<class Datatype>
-void SListIterator<Datatype>::Remove(SListIterator<Datatype>& p_iterator)
-{
-	SListNode<Datatype>* node = m_head;
-	// Si el iterador no pertenece a esta lista, no hace nada
-	if (p_iterator.m_list != this)
-		return;
-	// Si el nodo es inválido, no hace nada
-	if (p_iterator.m_node == 0)
-		return;
-	if (p_iterator.m_node == m_head)
-	{
-		// Mueve el iterador hacia delante y borra la cabeza
-		p_iterator.Forth();
-		LlamaAlConstructor.RemoveHead();
-	}
-	else
-	{
-		// Escanea hacia delante a través de la lista hasta que el nodo
-		// principal encuentra el nodo que deseas borrar
-		while (node->m_next != p_iterator.m_node)
-			node = node->m_next;
-		// Moueve el iterador hacia delante
-		p_iterator.Forth();
-		// Si el nodo que estás borrando es la cola, 
-		// entonces actualiza el nodo de la cola
-		if (node->m_next == m_tail)
-		{
-			m_tail = node;
-		}
-		// Borra el nodo
-		delete node->m_next;
-		// re-linkea la lista
-		node->m_next = p_iterator.m_node;
-	}
-	m_count--;
-}
 #endif // !1
