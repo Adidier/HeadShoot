@@ -31,7 +31,7 @@
     <ProjectGuid>{F2C01E4B-0B7A-4E4B-A9AC-DF076147FD50}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>ProjectShooter</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -236,6 +236,7 @@
     <ClInclude Include="Platform.h" />
     <ClInclude Include="PlatformSDL.h" />
     <ClInclude Include="PlatformWIN32.h" />
+    <ClInclude Include="Queue.h" />
     <ClInclude Include="Render\camera.h" />
     <ClInclude Include="Render\debugTimer.h" />
     <ClInclude Include="Render\math3d.h" />
@@ -279,6 +280,7 @@
     <ClCompile Include="PlatformSDL.cpp" />
     <ClCompile Include="PlatformWIN32.cpp" />
     <ClCompile Include="ProjectShooter.cpp" />
+    <ClCompile Include="Queue.cpp" />
     <ClCompile Include="Render\mesh.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Win32|Win32'">NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug Win32|Win32'">
