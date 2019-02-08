@@ -120,6 +120,9 @@
     <ClInclude Include="Utilities\HashTable.h">
       <Filter>Utilities</Filter>
     </ClInclude>
+    <ClInclude Include="Queue.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -208,6 +211,9 @@
     </ClCompile>
     <ClCompile Include="Utilities\HashTable.cpp">
       <Filter>Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="Queue.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
