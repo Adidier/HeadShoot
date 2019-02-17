@@ -31,7 +31,7 @@
     <ProjectGuid>{F2C01E4B-0B7A-4E4B-A9AC-DF076147FD50}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>ProjectShooter</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -256,6 +256,7 @@
     <ClInclude Include="Utilities\DoubleLinkedList.h" />
     <ClInclude Include="Utilities\HashTable.h" />
     <ClInclude Include="Utilities\LinkedList.h" />
+    <ClInclude Include="Utilities\Tree.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Enemy.cpp" />
@@ -299,6 +300,7 @@
     <ClCompile Include="Utilities\DoubleLinkedList.cpp" />
     <ClCompile Include="Utilities\HashTable.cpp" />
     <ClCompile Include="Utilities\LinkedList.cpp" />
+    <ClCompile Include="Utilities\Tree.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

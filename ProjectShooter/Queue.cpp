@@ -25,7 +25,7 @@ void Queue<dataType>::Dequeue()
 {
 	if (m_count > 0)
 	{
-		m_count—;
+		m_count--;
 		m_front++;
 		if (m_front == m_size)
 			m_front = 0;

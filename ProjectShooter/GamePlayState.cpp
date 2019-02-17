@@ -3,9 +3,24 @@
 #include "Stack.h"
 // Siempre debe de estar en debug y x64 para compilar
 #include "Utilities\HashTable.h"
+#include "Utilities\Tree.h"
 
 void GamePlayState::Init(Platform *plat)
 {
+	Tree<int>* node = new Tree<int>;
+	TreeIterator<int> itr(node);
+	itr = node;
+
+	node->m_data = 5;
+
+	Tree<int>* nodeHijoDerecho = new Tree<int>;
+	node->m_children.Append(nodeHijoDerecho);
+	nodeHijoDerecho->m_data = 10;
+
+
+	Tree<int>* nodeHijoIzquierdo = new Tree<int>;
+	node->m_children.Append(nodeHijoIzquierdo);
+	nodeHijoIzquierdo->m_data = 20;
 
 	platform = plat;
 	Log::Write("Current state: Init.");
