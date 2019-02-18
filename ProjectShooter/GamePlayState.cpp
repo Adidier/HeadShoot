@@ -22,6 +22,8 @@ void GamePlayState::Init(Platform *plat)
 	node->m_children.Append(nodeHijoIzquierdo);
 	nodeHijoIzquierdo->m_data = 20;
 
+	int count = node->Count();
+
 	platform = plat;
 	Log::Write("Current state: Init.");
 	map.loadMap("Map1.txt");
