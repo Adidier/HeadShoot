@@ -1,9 +1,10 @@
 #ifndef STACK_H
 #define STACK_H
-#include "Utilities/DoubleLinkedList.h"
+
+#include "Utilities/LinkedList.h";
 
 template <class dataType>
-class Stack : public  DoubleLinkedList <dataType>
+class Stack : public LinkedList <dataType>
 {
 public:
 

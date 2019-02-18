@@ -238,6 +238,7 @@
     <ClInclude Include="Platform.h" />
     <ClInclude Include="PlatformSDL.h" />
     <ClInclude Include="PlatformWIN32.h" />
+    <ClInclude Include="Queue.h" />
     <ClInclude Include="Render\camera.h" />
     <ClInclude Include="Render\debugTimer.h" />
     <ClInclude Include="Render\math3d.h" />
@@ -257,6 +258,7 @@
     <ClInclude Include="Utilities\DoubleLinkedList.h" />
     <ClInclude Include="Utilities\HashTable.h" />
     <ClInclude Include="Utilities\LinkedList.h" />
+    <ClInclude Include="Utilities\Tree.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Enemy.cpp" />
@@ -283,6 +285,7 @@
     <ClCompile Include="PlatformSDL.cpp" />
     <ClCompile Include="PlatformWIN32.cpp" />
     <ClCompile Include="ProjectShooter.cpp" />
+    <ClCompile Include="Queue.cpp" />
     <ClCompile Include="Render\mesh.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Win32|Win32'">NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug Win32|Win32'">
@@ -301,6 +304,7 @@
     <ClCompile Include="Utilities\DoubleLinkedList.cpp" />
     <ClCompile Include="Utilities\HashTable.cpp" />
     <ClCompile Include="Utilities\LinkedList.cpp" />
+    <ClCompile Include="Utilities\Tree.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
