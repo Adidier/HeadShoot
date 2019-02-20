@@ -90,7 +90,5 @@ bool SDoubleLinkedListIterator<Datatype>::Valid()
 	return (m_node != 0);
 }
 
-
-
 #include"DoubleLinkedList.cpp"
 #endif

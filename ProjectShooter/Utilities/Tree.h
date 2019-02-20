@@ -43,6 +43,14 @@ class Tree
 				c += itr.Item()->Count();
 			return c;
 		}
+
+		void Preorder(Tree<DataType>* p_node, void(*p_process)(Tree<DataType>*))
+		{
+			p_process(p_node);
+			SDoubleLinkedListIterator<Tree<DataType>*> itr = p_node->m_children.GetIterator();
+			for (itr.Start(); itr.Valid(); itr.Forth())
+				 Preorder(itr.Item(), p_process);
+		}
 };
 
 

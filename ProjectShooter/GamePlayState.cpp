@@ -4,7 +4,13 @@
 // Siempre debe de estar en debug y x64 para compilar
 #include "Utilities\HashTable.h"
 #include "Utilities\Tree.h"
+#include <iostream>
 
+template <class DataType>
+void print(Tree<DataType>* node)
+{
+	std::cout << node->m_data<<std::endl;
+}
 void GamePlayState::Init(Platform *plat)
 {
 	Tree<int>* node = new Tree<int>;
@@ -22,7 +28,12 @@ void GamePlayState::Init(Platform *plat)
 	node->m_children.Append(nodeHijoIzquierdo);
 	nodeHijoIzquierdo->m_data = 20;
 
+	Tree<int>* nodeHijoDer2 = new Tree<int>;
+	nodeHijoDer2->m_data = 3;
+	nodeHijoDerecho->m_children.Append(nodeHijoDer2);
 	int count = node->Count();
+
+	node->Preorder(node, print);
 
 	platform = plat;
 	Log::Write("Current state: Init.");
