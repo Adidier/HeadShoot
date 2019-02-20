@@ -1,4 +1,8 @@
 #ifdef LINKEDLIST_H
+<<<<<<< HEAD
+#include "transform.h"
+template class LinkedList<Transform>;
+=======
 
 template<class Datatype>
 void SListNode<Datatype>::InsertAfter(Datatype p_data)
@@ -11,6 +15,7 @@ void SListNode<Datatype>::InsertAfter(Datatype p_data)
 	// nodo previo apunta al nuevo nodo
 	m_next = newnode;
 }
+>>>>>>> origin/master
 
 template<class Datatype>
 LinkedList<Datatype>::LinkedList()
@@ -186,6 +191,10 @@ void LinkedList<Datatype>::Remove(SListIterator<Datatype>& p_iterator)
 	}
 	m_count--;
 }
+<<<<<<< HEAD
+template class LinkedList<Transform>;
+#endif // !1
+=======
 
 template<class Datatype>
 SListIterator<Datatype> LinkedList<Datatype>::GetIterator()
@@ -229,3 +238,4 @@ bool SListIterator<Datatype>::Valid()
 }
 
 #endif // !1
+>>>>>>> origin/master

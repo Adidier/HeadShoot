@@ -223,9 +223,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Enemy.h" />
+    <ClInclude Include="EnemyListMovement.h" />
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="GamePlayState.h" />
     <ClInclude Include="GameStateManager.h" />
+    <ClInclude Include="HashTable.h" />
     <ClInclude Include="ImageScreen.h" />
     <ClInclude Include="Key.h" />
     <ClInclude Include="Log.h" />
@@ -260,9 +262,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Enemy.cpp" />
+    <ClCompile Include="EnemyListMovement.cpp" />
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="GamePlayState.cpp" />
     <ClCompile Include="GameStateManager.cpp" />
+    <ClCompile Include="HashTable.cpp" />
     <ClCompile Include="ImageScreen.cpp" />
     <ClCompile Include="Key.cpp" />
     <ClCompile Include="Log.cpp" />
