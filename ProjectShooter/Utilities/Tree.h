@@ -1,70 +1,26 @@
-#pragma once
+#ifndef TREE_H
+#define TREE_H
+
 #include "DoubleLinkedList.h"
-
-
-
 
 template<class DataType>
 class Tree
 {
-
 public:
 	 typedef Tree<DataType> Node;
 	 DataType m_data;
 	 Node * m_parent;
 	 DoubleLinkedList<Node*> m_children;
 
-	 void Append(Node *node, DataType data)
-	 {
-		 if (node != NULL)
-		 {
-			 Tree<int>* nodeHijoDerecho = new Tree<int>;
-			 nodeHijoDerecho->m_parent = node;
-			 node->m_children.Append(nodeHijoDerecho);
-			 nodeHijoDerecho->m_data = data;
-		 }
-	 }
+	 Tree();
+	 ~Tree();
 
-	 Tree()
-	 {
-		 m_parent = 0;
-	 }
+	 void Destroy();	 
+	 int Count();
 
-	 ~Tree()
-	 {
-		 Destroy();
-	 }
-	 template<class DataType>
-	 void Destroy()
-	{
-		 SDoubleLinkedListIterator<Node*> itr = m_children.GetIterator();
-		 Node * node = 0;
-		itr.Start();
-		 while (itr.Valid())
-		 {
-			 node = itr.Item();
-			 m_children.Remove(itr);
-			 delete node;
-		 }
-	}
-	 template<class DataType>
-	 int Count()
-	 {
-		 int c = 1;
-		 SDoubleLinkedListIterator<Node*> itr = m_children.GetIterator();
-		 for (itr.Start(); itr.Valid(); itr.Forth())
-			 c += itr.Item()->Count();
-		 return c;
-	 }
-
-	 template < class DataType>
-	 void Preorder(Tree<DataType>* p_node, void(*p_process)(Tree<DataType>*))
-	 {
-		 p_process(p_node);
-		 DListIterator<Tree<DataType>*> itr = p_node->m_children.GetIterator();
-		 for (itr.Start(); itr.Valid(); itr.Forth())
-			Preorder(itr.Item(), p_process);
-	 }
+	 void Append(Node * node, DataType data);
+	 void Preorder(Tree<DataType>* p_node, void(*p_process)(Tree<DataType>*));
+	 void Postorder(Tree<DataType>* p_node, void(*p_process)(Tree<DataType>*));
 };
 
 
@@ -76,45 +32,16 @@ public:
 	Node * m_node;
 	SDoubleLinkedListIterator<Node*> m_childitr;
 
-	TreeIterator(Node* p_node = 0)
-	{
-		*this = p_node;
-	}
+	TreeIterator(Node* p_node = 0);
 
-	void operator= (Node* p_node)
-	{
-		m_node = p_node;
-		ResetIterator();
-	}
+	void operator= (Node* p_node);
 
-	void ResetIterator()
-	{
-		if (m_node != 0)
-		{
-			m_childitr = m_node->m_children.GetIterator();
-		}
-		else
-		{
-			m_childitr.m_list = 0;
-			m_childitr.m_node = 0;
-		}
-	}
-
-	void Up()
-	{
-		if (m_node != 0)
-		{
-			m_node = m_node->m_parent;
-		}
-		ResetIterator();
-	}
-
-	void Down()
-	{
-		if (m_childitr.Valid())
-		{
-			m_node = m_childitr.Item();
-			ResetIterator();
-		}
-	}
+	void ResetIterator();
+	void Up();
+	void Down();
 };
+
+#include "Tree.cpp"
+
+#endif
+
