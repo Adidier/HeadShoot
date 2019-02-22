@@ -14,11 +14,22 @@ public:
 	 Node * m_parent;
 	 DoubleLinkedList<Node*> m_children;
 
+	 void Append(Node *node, DataType data)
+	 {
+		 if (node != NULL)
+		 {
+			 Tree<int>* nodeHijoDerecho = new Tree<int>;
+			 nodeHijoDerecho->m_parent = node;
+			 node->m_children.Append(nodeHijoDerecho);
+			 nodeHijoDerecho->m_data = data;
+		 }
+	 }
 
 	 Tree()
 	 {
 		 m_parent = 0;
-	 }
+	 }
+
 	 ~Tree()
 	 {
 		 Destroy();
@@ -40,10 +51,19 @@ public:
 	 int Count()
 	 {
 		 int c = 1;
-		 DoubleLinkedList<Node*> itr = m_children.GetIterator();
+		 SDoubleLinkedListIterator<Node*> itr = m_children.GetIterator();
 		 for (itr.Start(); itr.Valid(); itr.Forth())
 			 c += itr.Item()->Count();
 		 return c;
+	 }
+
+	 template < class DataType>
+	 void Preorder(Tree<DataType>* p_node, void(*p_process)(Tree<DataType>*))
+	 {
+		 p_process(p_node);
+		 DListIterator<Tree<DataType>*> itr = p_node->m_children.GetIterator();
+		 for (itr.Start(); itr.Valid(); itr.Forth())
+			Preorder(itr.Item(), p_process);
 	 }
 };
 
