@@ -10,6 +10,14 @@ class Tree
 		DataType m_data;
 		Node * m_parent;
 		DoubleLinkedList<Node*> m_children;
+
+		void Append(Node* node, DataType data)
+		{
+			Tree<int>* nodeHijoDer = new Tree <int>;
+			nodeHijoDer->m_parent = node;
+			node->m_children.Append(nodeHijoDer);
+			nodeHijoDer->m_data = data;
+		}
 		
 		Tree()
 		{
@@ -50,6 +58,13 @@ class Tree
 			SDoubleLinkedListIterator<Tree<DataType>*> itr = p_node->m_children.GetIterator();
 			for (itr.Start(); itr.Valid(); itr.Forth())
 				 Preorder(itr.Item(), p_process);
+		}
+
+		void Postorder(Tree<DataType>* p_node, void(*p_process)(Tree<DataType>*))
+		{
+			SDoubleLinkedListIterator<Tree<DataType>*> itr = p_node->m_children.GetIterator();
+			for (itr.Start(); itr.Valid(); itr.Forth())
+				Postorder(itr.Item(), p_process);
 		}
 };
 

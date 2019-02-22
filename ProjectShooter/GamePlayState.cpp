@@ -34,6 +34,7 @@ void GamePlayState::Init(Platform *plat)
 	int count = node->Count();
 
 	node->Preorder(node, print);
+	node->Postorder(node, print);
 
 	platform = plat;
 	Log::Write("Current state: Init.");
