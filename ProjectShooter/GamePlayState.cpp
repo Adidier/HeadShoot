@@ -20,6 +20,11 @@ void GamePlayState::Init(Platform *plat)
 	raiz->rightChild->data = 6;
 	raiz->rightChild->parent = raiz;
 
+	raiz->rightChild->rightChild = new BinaryTree<int>;
+	raiz->rightChild->rightChild->data = 69;
+	raiz->rightChild->rightChild->parent = raiz->rightChild;
+
+
 	raiz->leftChild->leftChild = new BinaryTree<int>;
 	raiz->leftChild->leftChild->data = 79;
 	raiz->leftChild->leftChild->parent = raiz->leftChild;
@@ -28,7 +33,7 @@ void GamePlayState::Init(Platform *plat)
 	raiz->leftChild->rightChild->data = 42;
 	raiz->leftChild->rightChild->parent = raiz->leftChild;
 
-	BinaryTree<int>::Destroy(raiz);
+	BinaryTree<int>::Inorder(raiz);
 
 	if (raiz->leftChild)
 	{

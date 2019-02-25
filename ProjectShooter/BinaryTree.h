@@ -15,7 +15,43 @@ public:
 	void Append(Node *);
 	int Count();
 	static void Destroy(Node *);
+	static void Preorder(Node *);
+	static void Postorder(Node *, void (func*)(Node * node));
+	static void Inorder(Node *);
 };
+
+template<class DataType>
+void BinaryTree<DataType>::Preorder(Node * node)
+{
+	if (node != nullptr)
+	{
+		std::cout << node->data << std::endl;
+		Preorder(node->leftChild);
+		Preorder(node->rightChild);
+	}
+	
+}
+
+template<class DataType>
+void BinaryTree<DataType>::Postorder(Node * node, void (func*)(Node * node))
+{
+	if (node != nullptr)
+	{
+		Postorder(node->leftChild);
+		Postorder(node->rightChild);
+		std::cout << node->data << std::endl;
+	}
+}
+
+template<class DataType>
+void BinaryTree<DataType>::Inorder(Node * node)
+{
+	if (node == nullptr)
+		return;
+	Inorder(node->leftChild);
+	std::cout << node->data << std::endl;
+	Inorder(node->rightChild);
+}
 
 template<class DataType>
 BinaryTree<DataType>::BinaryTree()
