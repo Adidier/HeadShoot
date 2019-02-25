@@ -74,8 +74,10 @@ void SDoubleLinkedListIterator<Datatype>::Start()
 template<class Datatype>
 void SDoubleLinkedListIterator<Datatype>::Forth()
 {
-	if (m_node != 0)
+	if (m_node != 0 && m_node->m_next != 0)
 		m_node = m_node->m_next;
+	else
+		m_node = 0;
 }
 
 template<class Datatype>

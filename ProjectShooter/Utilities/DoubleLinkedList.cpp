@@ -28,11 +28,14 @@ void DoubleLinkedList<Datatype>::Append(Datatype p_data)
 	{
 		m_head = m_tail = new DoubleNode<Datatype>;
 		m_head->m_data = p_data;
+		m_head->m_next = m_tail;
+		m_tail->m_next = nullptr;
 	}
 	else
 	{
 		InsertAfter(p_data);
 		m_tail = m_tail->m_next;
+		m_tail->m_next = nullptr;
 	}
 	m_count++;
 }

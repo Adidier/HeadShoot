@@ -3,38 +3,37 @@
 #include "Stack.h"
 // Siempre debe de estar en debug y x64 para compilar
 #include "Utilities\HashTable.h"
-#include "Utilities\Tree.h"
+#include "BinaryTree.h"
 #include <iostream>
 
-template <class DataType>
-void print(Tree<DataType>* node)
-{
-	std::cout << node->m_data<<std::endl;
-}
+
 void GamePlayState::Init(Platform *plat)
 {
-	Tree<int>* node = new Tree<int>;
-	TreeIterator<int> itr(node);
-	itr = node;
+	BinaryTree<int>* raiz1;
+	BinaryTree<int>* raiz = new BinaryTree<int>;
+	raiz->data = 28;
+	raiz->leftChild = new BinaryTree<int>;
+	raiz->leftChild->data = 37;
+	raiz->leftChild->parent = raiz;
 
-	node->m_data = 5;
+	raiz->rightChild = new BinaryTree<int>;
+	raiz->rightChild->data = 6;
+	raiz->rightChild->parent = raiz;
 
-	Tree<int>* nodeHijoDerecho = new Tree<int>;
-	node->m_children.Append(nodeHijoDerecho);
-	nodeHijoDerecho->m_data = 10;
+	raiz->leftChild->leftChild = new BinaryTree<int>;
+	raiz->leftChild->leftChild->data = 79;
+	raiz->leftChild->leftChild->parent = raiz->leftChild;
 
+	raiz->leftChild->rightChild = new BinaryTree<int>;
+	raiz->leftChild->rightChild->data = 42;
+	raiz->leftChild->rightChild->parent = raiz->leftChild;
 
-	Tree<int>* nodeHijoIzquierdo = new Tree<int>;
-	node->m_children.Append(nodeHijoIzquierdo);
-	nodeHijoIzquierdo->m_data = 20;
+	BinaryTree<int>::Destroy(raiz);
 
-	Tree<int>* nodeHijoDer2 = new Tree<int>;
-	nodeHijoDer2->m_data = 3;
-	nodeHijoDerecho->m_children.Append(nodeHijoDer2);
-	int count = node->Count();
-
-	node->Preorder(node, print);
-
+	if (raiz->leftChild)
+	{
+		int count = raiz->Count();
+	}
 	platform = plat;
 	Log::Write("Current state: Init.");
 	map.loadMap("Map1.txt");
