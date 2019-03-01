@@ -1,44 +1,28 @@
 #include "pch.h"
 #include "GamePlayState.h"
-#include "Stack.h"
 // Siempre debe de estar en debug y x64 para compilar
 #include "Utilities\HashTable.h"
 #include "BinaryTree.h"
 #include <iostream>
 
+int CompareInts(int left, int right)
+{
+	return left - right;
+}
 
 void GamePlayState::Init(Platform *plat)
 {
-	BinaryTree<int>* raiz1;
-	BinaryTree<int>* raiz = new BinaryTree<int>;
-	raiz->data = 28;
-	raiz->leftChild = new BinaryTree<int>;
-	raiz->leftChild->data = 37;
-	raiz->leftChild->parent = raiz;
-
-	raiz->rightChild = new BinaryTree<int>;
-	raiz->rightChild->data = 6;
-	raiz->rightChild->parent = raiz;
-
-	raiz->rightChild->rightChild = new BinaryTree<int>;
-	raiz->rightChild->rightChild->data = 69;
-	raiz->rightChild->rightChild->parent = raiz->rightChild;
-
-
-	raiz->leftChild->leftChild = new BinaryTree<int>;
-	raiz->leftChild->leftChild->data = 79;
-	raiz->leftChild->leftChild->parent = raiz->leftChild;
-
-	raiz->leftChild->rightChild = new BinaryTree<int>;
-	raiz->leftChild->rightChild->data = 42;
-	raiz->leftChild->rightChild->parent = raiz->leftChild;
-
-	BinaryTree<int>::Inorder(raiz);
-
-	if (raiz->leftChild)
-	{
-		int count = raiz->Count();
-	}
+	BinarySearchTree<int> tree(CompareInts);
+	BinaryTree<int>* node;
+	// insert data
+	tree.Insert(8);
+	tree.Insert(4);
+	tree.Insert(12);
+	tree.Insert(2);
+	tree.Insert(6);
+	tree.Insert(10);
+	tree.Insert(14);
+	tree.Insert(14);
 	platform = plat;
 	Log::Write("Current state: Init.");
 	map.loadMap("Map1.txt");
@@ -55,14 +39,6 @@ void GamePlayState::Init(Platform *plat)
 	guns.Append(4);
 	guns.RemoveTail();
     enemy1 = new Enemy();
-
-	Stack <int> pila;
-	pila.push(1);
-	pila.push(2);
-	pila.push(3);
-	pila.pop();
-
-	int r = pila.top();
 }
 void GamePlayState::Update()
 {

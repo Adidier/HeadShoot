@@ -222,7 +222,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="BinaryTree.h" />
     <ClInclude Include="Enemy.h" />
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="GamePlayState.h" />
@@ -237,7 +236,6 @@
     <ClInclude Include="Platform.h" />
     <ClInclude Include="PlatformSDL.h" />
     <ClInclude Include="PlatformWIN32.h" />
-    <ClInclude Include="Queue.h" />
     <ClInclude Include="Render\camera.h" />
     <ClInclude Include="Render\debugTimer.h" />
     <ClInclude Include="Render\math3d.h" />
@@ -251,16 +249,19 @@
     <ClInclude Include="ResourceManager.h" />
     <ClInclude Include="Sound.h" />
     <ClInclude Include="Sprite.h" />
-    <ClInclude Include="Stack.h" />
     <ClInclude Include="State.h" />
+    <ClInclude Include="Utilities\Array.h" />
+    <ClInclude Include="Utilities\BinaryTree.h" />
     <ClInclude Include="Utilities\BitVector.h" />
     <ClInclude Include="Utilities\DoubleLinkedList.h" />
     <ClInclude Include="Utilities\HashTable.h" />
+    <ClInclude Include="Utilities\Heap.h" />
     <ClInclude Include="Utilities\LinkedList.h" />
+    <ClInclude Include="Utilities\Queue.h" />
+    <ClInclude Include="Utilities\Stack.h" />
     <ClInclude Include="Utilities\Tree.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="BinaryTree.cpp" />
     <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="GamePlayState.cpp" />
@@ -283,7 +284,6 @@
     <ClCompile Include="PlatformSDL.cpp" />
     <ClCompile Include="PlatformWIN32.cpp" />
     <ClCompile Include="ProjectShooter.cpp" />
-    <ClCompile Include="Queue.cpp" />
     <ClCompile Include="Render\mesh.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Win32|Win32'">NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug Win32|Win32'">
@@ -296,12 +296,16 @@
     <ClCompile Include="ResourceManager.cpp" />
     <ClCompile Include="Sound.cpp" />
     <ClCompile Include="Sprite.cpp" />
-    <ClCompile Include="Stack.cpp" />
     <ClCompile Include="State.cpp" />
+    <ClCompile Include="Utilities\Array.cpp" />
+    <ClCompile Include="Utilities\BinaryTree.cpp" />
     <ClCompile Include="Utilities\BitVector.cpp" />
     <ClCompile Include="Utilities\DoubleLinkedList.cpp" />
     <ClCompile Include="Utilities\HashTable.cpp" />
+    <ClCompile Include="Utilities\Heap.cpp" />
     <ClCompile Include="Utilities\LinkedList.cpp" />
+    <ClCompile Include="Utilities\Queue.cpp" />
+    <ClCompile Include="Utilities\Stack.cpp" />
     <ClCompile Include="Utilities\Tree.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

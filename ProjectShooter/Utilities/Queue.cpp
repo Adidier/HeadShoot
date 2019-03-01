@@ -1,4 +1,4 @@
-#ifdef STACK_H
+#ifdef QUEUE_H
 
 template<class Datatype>
 void Queue<Datatype>::Enqueue(Datatype p_data)

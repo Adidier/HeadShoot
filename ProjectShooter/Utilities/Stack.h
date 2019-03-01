@@ -17,4 +17,5 @@ public:
 };
 
 #include "Stack.cpp"
+
 #endif
